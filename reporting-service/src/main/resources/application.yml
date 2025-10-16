@@ -7,6 +7,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://mongo_admin:mongo_password@localhost:27017/admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080  # adres serwera Spring Boot Admin
 
 server:
   port: 8103
@@ -15,3 +19,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always

@@ -5,6 +5,11 @@ spring:
     virtual:
       enabled: true
 
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080  # adres serwera Spring Boot Admin
+
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres_database
     username: postgres_admin
@@ -25,3 +30,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
