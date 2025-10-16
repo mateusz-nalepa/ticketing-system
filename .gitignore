@@ -1,0 +1,6 @@
+build
+ticketing-service/build
+order-service/build
+reporting-service-service/build
+.gradle
+.idea

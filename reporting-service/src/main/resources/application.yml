@@ -4,6 +4,9 @@ spring:
   threads:
     virtual:
       enabled: true
+  data:
+    mongodb:
+      uri: mongodb://mongo_admin:mongo_password@localhost:27017/admin
 
 server:
   port: 8103
