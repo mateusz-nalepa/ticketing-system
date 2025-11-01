@@ -33,7 +33,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.github.loki4j:loki-logback-appender:2.0.1")
-
+    // tempo, spany, tracy
+    implementation("io.micrometer:micrometer-tracing:1.5.5")
+    implementation("io.micrometer:micrometer-tracing-bridge-brave:1.5.5")
+    implementation("io.zipkin.reporter2:zipkin-reporter-brave:3.5.1")
 
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")

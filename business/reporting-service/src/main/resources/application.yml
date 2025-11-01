@@ -29,3 +29,9 @@ management:
   endpoint:
     health:
       show-details: always
+
+  # observation documentation
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

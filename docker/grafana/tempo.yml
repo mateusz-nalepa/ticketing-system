@@ -3,7 +3,7 @@ server:
 distributor:
   receivers:
     zipkin:
-      endpoint: "tempo:9411"
+      endpoint: "ts-tempo:9411" # ts-tempo, because container name is "ts-tempo"
 storage:
   trace:
     backend: local
