@@ -4,7 +4,7 @@ rootProject.name = "ticketing-system"
 include(
     ":platform:eureka-server",
     ":platform:admin-server",
-    ":business:ticketing-service",
-    ":business:order-service",
-    ":business:reporting-service",
+    ":business:a-ticketing-service",
+    ":business:b-order-service",
+    ":business:c-reporting-service",
 )

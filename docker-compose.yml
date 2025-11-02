@@ -19,7 +19,7 @@ services:
     ports:
       - "5432:5432"  # wystawienie portu
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # trwały wolumen
+      - postgres_data:/var/lib/postgresql/18/main # trwały wolumen
     restart: unless-stopped
 #    mysql:
 #        container_name: mysql
