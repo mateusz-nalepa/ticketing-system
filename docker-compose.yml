@@ -116,7 +116,7 @@ services:
       depends_on: ['ts-tempo-init']
       volumes:
           - tempo_data:/var/tempo
-          - ./docker/grafana/tempo.yml:/etc/tempo.yml:ro
+          - ./docker/tempo/tempo.yml:/etc/tempo.yml:ro
       ports:
           - "3200:3200"    # tempo
           - "9411:9411"    # zipkin
