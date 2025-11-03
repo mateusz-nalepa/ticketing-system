@@ -39,6 +39,9 @@ dependencies {
     implementation("io.micrometer:micrometer-tracing-bridge-brave:1.5.5")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave:3.5.1")
 
+    // metrics
+    implementation("io.micrometer:micrometer-registry-prometheus:1.15.5")
+
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")

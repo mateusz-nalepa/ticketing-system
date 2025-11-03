@@ -32,10 +32,14 @@ dependencies {
 
     // loki
     implementation("com.github.loki4j:loki-logback-appender:2.0.1")
+
     // tempo, spany, tracy
     implementation("io.micrometer:micrometer-tracing:1.5.5")
     implementation("io.micrometer:micrometer-tracing-bridge-brave:1.5.5")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave:3.5.1")
+
+    // metrics
+    implementation("io.micrometer:micrometer-registry-prometheus:1.15.5")
 
     implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
