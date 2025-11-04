@@ -31,7 +31,13 @@ class DummyOrderUseCase(
             )
             .observe(Supplier { internalOrder(name, number) })!!
     }
+//    traceId -> 690a53282cec6f0ac95b4ad4dc532c8b
+//    spanId -> 0c2db80f85370b84
+//    traceparent: 00-690a53282cec6f0ac95b4ad4dc532c8b-b8dffc203607af65-01\r\n
 
+    // interceptor nie dodaje headera traceParent, tylko poprzez ClientRequestObservationContext się to dzieje
+    // a pod spodem jest:
+//    io.micrometer.tracing.brave.bridge.W3CPropagation.injector
     fun internalOrder(name: String, number: String): String {
         Thread.sleep(number.toLong())
         return reportingServiceRestClient
