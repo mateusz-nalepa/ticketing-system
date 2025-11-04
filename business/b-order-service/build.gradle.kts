@@ -45,6 +45,9 @@ dependencies {
     // metrics
     implementation("io.micrometer:micrometer-registry-prometheus:1.15.5")
 
+    // chaos monkey
+    implementation("de.codecentric:chaos-monkey-spring-boot:3.2.2")
+
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
