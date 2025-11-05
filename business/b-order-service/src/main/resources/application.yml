@@ -1,6 +1,6 @@
 spring:
-  profiles:
-    active: chaos-monkey
+#  profiles:
+#    active: chaos-monkey
   application:
     name: order-service
   threads:
