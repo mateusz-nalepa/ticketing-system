@@ -43,8 +43,6 @@ management:
   endpoint:
     health:
       show-details: always
-    chaosmonkey:
-      enabled: true
 
   # observation documentation
   tracing:
@@ -52,32 +50,12 @@ management:
     sampling:
       probability: 1.0
   metrics:
+    tags:
+      application: ${spring.application.name}
     export:
       prometheus:
         enabled: true
-
-# https://codecentric.github.io/chaos-monkey-spring-boot/latest/#configuration
-chaos:
-  monkey:
-    enabled: true # or just use chaos-monkey profile
-    watcher:
-#      restController: true
-      restTemplate: true
-      # There is no such property :D
-#      restClient: true
-      component: false
-      service: false
-      repository: false
-    assaults:
-      level: 2
-      deterministic: false # this and above means: every 2 request
-      latencyActive: true
-      latencyRangeStart: 1000
-      latencyRangeEnd: 3000
-
-      exceptionsActive: true
-      exception:
-        type: java.lang.IllegalStateException
-        arguments:
-          - type: java.lang.String
-            value: "monkey broke prod!"
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+        http.client.requests: true
