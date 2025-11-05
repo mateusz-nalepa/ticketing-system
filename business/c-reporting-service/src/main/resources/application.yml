@@ -6,7 +6,8 @@ spring:
       enabled: true
   data:
     mongodb:
-      uri: mongodb://mongo_admin:mongo_password@localhost:27017/admin
+#      uri: mongodb://mongo_admin:mongo_password@localhost:27017/admin
+      uri: mongodb://mongo_admin:mongo_password@localhost:17017/admin # 17017 - toxiproxy port
   boot:
     admin:
       client:

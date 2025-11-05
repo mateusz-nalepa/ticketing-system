@@ -1,0 +1,14 @@
+[
+  {
+    "name": "postgres-db",
+    "listen": "[::]:15432",
+    "upstream": "host.docker.internal:5432",
+    "enabled": true
+  },
+  {
+    "name": "mongo-db",
+    "listen": "[::]:17017",
+    "upstream": "host.docker.internal:27017",
+    "enabled": true
+  }
+]

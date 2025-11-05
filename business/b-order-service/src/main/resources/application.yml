@@ -13,7 +13,8 @@ spring:
         url: http://localhost:8080  # adres serwera Spring Boot Admin
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres_database
+#    url: jdbc:postgresql://localhost:5432/postgres_database
+    url: jdbc:postgresql://localhost:15432/postgres_database # 15432 - toxiproxy port
     username: postgres_admin
     password: postgres_password
   jpa:
