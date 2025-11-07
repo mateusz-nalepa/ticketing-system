@@ -127,6 +127,7 @@ services:
       command: ['-config.file=/etc/loki/local-config.yaml']
       ports:
           - "3100:3100"
+#  TODO - it's possible to use ToxiProxi as a Docker Container <3
   ts-toxiproxy:
     container_name: ts-toxiproxy
     image: ghcr.io/shopify/toxiproxy:2.12.0 # https://github.com/shopify/toxiproxy/pkgs/container/toxiproxy
