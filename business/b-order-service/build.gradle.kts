@@ -48,6 +48,9 @@ dependencies {
     // chaos monkey
     implementation("de.codecentric:chaos-monkey-spring-boot:3.2.2")
 
+//    TODO it looks like, that at moment of writing, spring grater than 3.2.x is not supported yet
+    // telemetry
+//    implementation("io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:2.21.0")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
