@@ -25,8 +25,15 @@ dependencyManagement {
     }
 }
 
+val micrometerDocsVersion by extra("1.0.2")
+
+val adoc by configurations.creating
+
 
 dependencies {
+    // docs for observationDocumentation
+    adoc("io.micrometer:micrometer-docs-generator:$micrometerDocsVersion")
+
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("de.codecentric:spring-boot-admin-starter-client:3.5.5")
 
@@ -62,4 +69,15 @@ kotlin {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+// files are created, but right now without content :pepe:
+tasks.register<JavaExec>("generateObservabilityDocs") {
+    mainClass.set("io.micrometer.docs.DocsGeneratorCommand")
+    classpath = adoc
+    args(
+        rootDir.absolutePath,
+        ".*",
+        project.layout.buildDirectory.asFile.get().absolutePath + "/metrics"
+    )
 }
