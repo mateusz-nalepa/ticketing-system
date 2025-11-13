@@ -72,6 +72,8 @@ tasks.withType<Test> {
 }
 
 // files are created, but right now without content :pepe:
+// At moment of writing, docs generator does not work for Kotlin, but Java works
+// https://github.com/micrometer-metrics/micrometer-docs-generator/issues/228
 tasks.register<JavaExec>("generateObservabilityDocs") {
     mainClass.set("io.micrometer.docs.DocsGeneratorCommand")
     classpath = adoc
