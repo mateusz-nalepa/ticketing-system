@@ -15,4 +15,12 @@
     Jako przyklad, saturacja puli watkow o ktorej rozmawialismy. 
 11. Czy zalecasz odpalic management na osobnym porcie? albo osobna pula watkow na endpointy /status, /readiness/ liveness?
     informacyjnie dla Nalepy: https://github.com/spring-projects/spring-framework/issues/35238
+    TL;DR - jak /status/prometheus i zwykle (biznesowe) endpointy w apce sa na tej samej puli, to moze nastapic saturacja
+    /status/prometheus nie bedzie odpowiadal, bo endpointy biznesowe przytkaly pule watkow
 12. Nie mogło zabraknąć: AI a Kwestia observabillity, tracingu
+13. Pewnie zawsze warto mierzyc rzeczy z 2 stron. 
+    Np. ilosc taskow w kolejce 1, ale czas czekania wynosi 10m -> 10m
+        ilosc tasko w kolejce 100, i czas czekania po 10ms --> 1s 
+    Jakie inne przypadki tego typu znasz?
+    
+    
